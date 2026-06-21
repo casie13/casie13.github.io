@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honours Psychology Thesis — Kazma Chaudhry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECEBE4;--paper-2:#E4E3DA;--ink:#18191A;--field:#1E2A2C;
+    --muted:#6E7168;--line:#D2D1C8;--line-dk:#3A4749;
+    --accent:#186A75;--accent-br:#2A8C99;--paper-on-dk:#EDEBE2;--measure:64ch;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif;font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px}
+  a{color:inherit}
+  .tag{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:lowercase;color:var(--accent)}
+  .tag::before{content:"[ ";color:var(--muted)}
+  .tag::after{content:" ]";color:var(--muted)}
+
+  .topbar{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:baseline;padding:24px 28px 22px}
+  .topbar .name{font-family:"Archivo",sans-serif;font-weight:700;font-size:16px;text-decoration:none}
+  .topbar .back{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);text-decoration:none}
+  .topbar .back:hover{color:var(--accent)}
+
+  header.case-head{border-top:1px solid var(--line);margin-top:0}
+  .case-head-inner{max-width:760px;margin:0 auto;padding:54px 28px 44px}
+  .case-head h1{font-family:"Archivo",sans-serif;font-weight:600;font-size:clamp(30px,5vw,46px);line-height:1.08;letter-spacing:-.02em;margin:16px 0 0;max-width:20ch}
+  .case-head .standfirst{margin-top:20px;font-size:21px;color:#34352F;max-width:var(--measure);line-height:1.5}
+  .metarow{display:flex;flex-wrap:wrap;gap:26px;margin-top:34px;padding-top:24px;border-top:1px solid var(--line)}
+  .metarow .m{font-family:"IBM Plex Mono",monospace;font-size:12.5px}
+  .metarow .m span{display:block;color:var(--muted);margin-bottom:4px}
+  .metarow .m b{font-weight:500;color:var(--ink)}
+
+  /* image slot */
+  .imgslot{max-width:760px;margin:34px auto 0;padding:0 28px}
+  .imgslot .box{aspect-ratio:16/9;background:var(--paper-2);border:1px dashed var(--line);border-radius:2px;display:flex;align-items:center;justify-content:center}
+  .imgslot .box span{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted)}
+
+  /* the spine */
+  article{padding:30px 0 20px}
+  .step{padding:40px 0;border-top:1px solid var(--line)}
+  .step:first-child{border-top:none}
+  .step > .tag{display:block;margin-bottom:16px}
+  .step h2{font-family:"Archivo",sans-serif;font-weight:600;font-size:24px;letter-spacing:-.01em;margin-bottom:14px}
+  .step p{max-width:var(--measure);margin-bottom:14px}
+
+  /* writing prompt — the slot that pulls content out */
+  .prompt{
+    border-left:2px solid var(--accent);
+    background:var(--paper-2);
+    padding:16px 20px;border-radius:0 2px 2px 0;
+    font-style:italic;color:#4A4C44;font-size:16.5px;line-height:1.5;
+    max-width:var(--measure);
+  }
+  .prompt b{font-style:normal;font-weight:500;color:var(--accent);font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.03em;text-transform:lowercase;display:block;margin-bottom:6px}
+
+  footer{background:var(--field);color:var(--paper-on-dk);margin-top:40px;border-radius:2px}
+  .foot-inner{max-width:760px;margin:0 auto;padding:48px 28px}
+  .foot-inner a{color:var(--accent-br);text-decoration:none;font-family:"IBM Plex Mono",monospace;font-size:14px}
+  .foot-inner a:hover{text-decoration:underline}
+  .foot-inner .next{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+
+  @media (max-width:640px){body{font-size:18px}.metarow{gap:18px}}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="index.html" class="name">Kazma Chaudhry</a>
+  <a href="index.html" class="back">← all work</a>
+</nav>
+
+<header class="case-head">
+  <div class="case-head-inner">
+    <p class="tag">behavioural research</p>
+    <h1>Undergraduate honours thesis — psychology</h1>
+    <p class="standfirst">An empirical psychology thesis — the foundation of how I design studies, reason about evidence, and handle data with care.</p>
+    <div class="metarow">
+      <div class="m"><span>role</span><b>Thesis researcher</b></div>
+      <div class="m"><span>methods</span><b>Empirical study</b></div>
+      <div class="m"><span>context</span><b>B.A. Psychology, Waterloo</b></div>
+      <div class="m"><span>year</span><b>fill in</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="imgslot">
+  <div class="box"><span>images/thesis-1.jpg — a clean figure or chart from the study (optional)</span></div>
+</div>
+
+<div class="wrap">
+  <article>
+    <section class="step">
+      <span class="tag">tl;dr</span>
+      <div class="prompt"><b>write this last</b>One or two sentences: what was the project, and what changed because of your research? Write it last, once the study below is clear.</div>
+    </section>
+    <section class="step">
+      <span class="tag">context</span>
+      <h2>The situation</h2>
+      <div class="prompt"><b>prompt</b>The topic and why it mattered. Keep it tight — this case earns its place by showing methodological foundations, so don't over-explain the domain.</div>
+    </section>
+    <section class="step">
+      <span class="tag">research question</span>
+      <h2>What I set out to answer</h2>
+      <div class="prompt"><b>prompt</b>Your hypothesis or research question, stated as you'd state it in the paper.</div>
+    </section>
+    <section class="step">
+      <span class="tag">methods</span>
+      <h2>What I actually did</h2>
+      <div class="prompt"><b>prompt</b>Design, sample, measures, and analysis. This is where the case pays off: it proves you understand experimental/empirical method from the ground up — operationalisation, controls, statistics. Be specific about what you ran yourself.</div>
+    </section>
+    <section class="step">
+      <span class="tag">key findings</span>
+      <h2>What we found</h2>
+      <div class="prompt"><b>prompt — 2 to 4 findings</b>What you found, including null or partial results stated honestly. Evidence over spin.</div>
+    </section>
+    <section class="step">
+      <span class="tag">impact</span>
+      <h2>What changed</h2>
+      <div class="prompt"><b>prompt</b>How this thesis shaped you as a researcher and connects to the applied work above — the through-line from psychology method to UX research.</div>
+    </section>
+    <section class="step">
+      <span class="tag">reflection</span>
+      <h2>What I'd carry forward</h2>
+      <div class="prompt"><b>prompt</b>Limitations honestly stated, what you'd do differently, and what the work taught you as a researcher.</div>
+    </section>
+
+  </article>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="next">
+      <a href="case-protea.html">← prev: tangible interaction</a>
+      <a href="index.html">all work →</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

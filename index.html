@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kazma Chaudhry — UX Researcher</title>
+<meta name="description" content="Kazma Chaudhry — mixed-methods UX researcher working in privacy, security, and regulated data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ECEBE4;
+    --paper-2:#E4E3DA;
+    --ink:#18191A;
+    --field:#1E2A2C;
+    --muted:#6E7168;
+    --line:#D2D1C8;
+    --line-dk:#3A4749;
+    --accent:#186A75;
+    --accent-br:#2A8C99;
+    --paper-on-dk:#EDEBE2;
+    --measure:62ch;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:19px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  a{color:inherit}
+
+  /* ---- utility / mono labels (the signature bracket motif) ---- */
+  .tag{
+    font-family:"IBM Plex Mono",ui-monospace,monospace;
+    font-size:12.5px;
+    letter-spacing:.04em;
+    text-transform:lowercase;
+    color:var(--accent);
+  }
+  .tag::before{content:"[ ";color:var(--muted)}
+  .tag::after{content:" ]";color:var(--muted)}
+  .tag.on-dk{color:var(--accent-br)}
+  .tag.on-dk::before,.tag.on-dk::after{color:#7E8C88}
+
+  /* ---- top bar ---- */
+  .topbar{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding:24px 0 22px;
+    border-bottom:1px solid var(--line);
+  }
+  .topbar .name{
+    font-family:"Archivo",system-ui,sans-serif;
+    font-weight:700;font-size:16px;letter-spacing:-.01em;
+    text-decoration:none;
+  }
+  .topbar .meta{
+    font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+    text-decoration:none;
+  }
+  .topbar .meta:hover{color:var(--accent)}
+
+  /* ---- hero (the dark "field" block — signature) ---- */
+  .hero{
+    background:var(--field);
+    color:var(--paper-on-dk);
+    margin-top:0;
+    border-radius:2px;
+  }
+  .hero-inner{padding:88px 0 92px;max-width:1080px;margin:0 auto;padding-left:28px;padding-right:28px}
+  .hero .eyebrow{margin-bottom:30px}
+  .hero h1{
+    font-family:"Archivo",system-ui,sans-serif;
+    font-weight:600;
+    font-size:clamp(30px,5.4vw,58px);
+    line-height:1.04;
+    letter-spacing:-.02em;
+    max-width:18ch;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--accent-br);
+  }
+  .hero .sub{
+    margin-top:30px;
+    max-width:54ch;
+    font-size:clamp(17px,2.2vw,21px);
+    color:#C9CCC3;
+    line-height:1.5;
+  }
+
+  /* ---- section scaffolding ---- */
+  section{padding:74px 0}
+  .sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:38px}
+  .sec-head h2{
+    font-family:"Archivo",sans-serif;font-weight:600;font-size:15px;
+    letter-spacing:.02em;color:var(--ink);text-transform:uppercase;
+  }
+  .rule{height:1px;background:var(--line);flex:1}
+
+  /* ---- work list ---- */
+  .work{display:grid;gap:2px}
+  .case{
+    display:block;text-decoration:none;color:inherit;
+    border-top:1px solid var(--line);
+    padding:34px 0 38px;
+    transition:padding-left .25s ease,background .25s ease;
+  }
+  .case:last-child{border-bottom:1px solid var(--line)}
+  .case:hover,.case:focus-visible{
+    padding-left:14px;
+    background:linear-gradient(90deg,var(--paper-2),transparent 60%);
+    outline:none;
+  }
+  .case .row1{display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap}
+  .case h3{
+    font-family:"Archivo",sans-serif;font-weight:600;
+    font-size:clamp(22px,3vw,30px);letter-spacing:-.015em;line-height:1.12;
+    max-width:20ch;
+  }
+  .case .more{
+    font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted);
+    white-space:nowrap;
+  }
+  .case:hover .more,.case:focus-visible .more{color:var(--accent)}
+  .case .desc{margin-top:14px;max-width:var(--measure);color:#34352F;font-size:18px}
+  .case .org{margin-top:10px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted)}
+
+  /* ---- approach strip ---- */
+  .approach p{max-width:var(--measure);font-size:21px;line-height:1.55}
+  .approach p + p{margin-top:18px}
+  .approach .lead{font-size:25px;line-height:1.4}
+
+  /* ---- footer ---- */
+  footer{
+    background:var(--field);color:var(--paper-on-dk);
+    margin-top:40px;border-radius:2px;
+  }
+  .foot-inner{padding:66px 0 60px;max-width:1080px;margin:0 auto;padding-left:28px;padding-right:28px}
+  .foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+  .foot-grid h4{font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:12.5px;color:#8B978F;margin-bottom:16px;letter-spacing:.03em}
+  .foot-grid a{color:var(--paper-on-dk);text-decoration:none;border-bottom:1px solid var(--line-dk)}
+  .foot-grid a:hover{border-color:var(--accent-br);color:var(--accent-br)}
+  .foot-grid .line{margin-bottom:8px;color:#C9CCC3}
+  .foot-note{margin-top:46px;padding-top:24px;border-top:1px solid var(--line-dk);font-family:"IBM Plex Mono",monospace;font-size:12px;color:#7E8C88}
+
+  @media (max-width:640px){
+    body{font-size:18px}
+    .hero-inner{padding:64px 0 66px}
+    .foot-grid{grid-template-columns:1fr;gap:34px}
+    .case .row1{flex-direction:column;gap:6px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto!important}
+  }
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <a href="index.html" class="name" style="color:var(--paper-on-dk);text-decoration:none;font-family:'Archivo',sans-serif;font-weight:700;font-size:16px;display:inline-block;margin-bottom:38px;">Kazma Chaudhry</a>
+    <p class="eyebrow tag on-dk">mixed-methods ux research</p>
+    <h1>I do research where the data is sensitive and the <em>decisions are hard</em>.</h1>
+    <p class="sub">Privacy, security, and regulated health data — domains where getting the research wrong has real consequences. I turn evidence into decisions teams actually act on.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section id="work">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="work">
+
+      <!-- CASE 1 — ANCHOR -->
+      <a class="case" href="case-tochi.html">
+        <p class="tag">privacy &amp; security</p>
+        <div class="row1" style="margin-top:12px;">
+          <h3>How remote-proctoring surveillance reshapes trust</h3>
+          <span class="more">Read the study →</span>
+        </div>
+        <p class="desc">A mixed-methods study of e-proctoring — examining how being watched during exams changes student behaviour and trust, and what privacy-respecting assessment could look like.</p>
+        <p class="org">CHORUS Lab, Carleton University · SOUPS 2022 Distinguished Poster · EuroUSEC 2023 · TOCHI (under review)</p>
+      </a>
+
+      <!-- CASE 2 -->
+      <a class="case" href="case-cihi.html">
+        <p class="tag">regulated health data</p>
+        <div class="row1" style="margin-top:12px;">
+          <h3>Researching how analysts work with national health data</h3>
+          <span class="more">Read the study →</span>
+        </div>
+        <p class="desc">UX research conducted inside Canada's national health-data authority, where privacy, governance, and analyst workflows all had to be held at once.</p>
+        <p class="org">Canadian Institute for Health Information (CIHI) · UX Research Analyst, 2023</p>
+      </a>
+
+      <!-- CASE 3 -->
+      <a class="case" href="case-protea.html">
+        <p class="tag">tangible interaction</p>
+        <div class="row1" style="margin-top:12px;">
+          <h3>Protea-Type — a tangible interface, built and tested</h3>
+          <span class="more">Read the study →</span>
+        </div>
+        <p class="desc">A physical, tangible user interface designed, prototyped, and evaluated as part of an HCI master's — research through building, not just specifying.</p>
+        <p class="org">M.A. Human-Computer Interaction, Carleton University</p>
+      </a>
+
+      <!-- CASE 4 -->
+      <a class="case" href="case-thesis.html">
+        <p class="tag">behavioural research</p>
+        <div class="row1" style="margin-top:12px;">
+          <h3>Undergraduate honours thesis — psychology</h3>
+          <span class="more">Read the study →</span>
+        </div>
+        <p class="desc">An empirical psychology thesis: the foundation of how I design studies, reason about evidence, and handle data with care.</p>
+        <p class="org">Hon. B.A. Psychology, University of Waterloo</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="approach" id="approach">
+    <div class="sec-head">
+      <h2>Approach</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="lead">I work where the stakes are real — and that changes how research gets done.</p>
+    <p>Sensitive data, regulated environments, and people in vulnerable positions don't tolerate sloppy method. My background is mixed-methods: interviews and qualitative analysis sit alongside survey design and quantitative work, and I'm comfortable moving between them depending on what the question needs.</p>
+    <p>The output that matters isn't a report — it's a decision a team makes differently. Every study below is framed around what changed because the research existed.</p>
+  </section>
+
+</div>
+
+<footer id="contact">
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <h4>contact</h4>
+        <p class="line"><a href="mailto:you@example.com">you@example.com</a></p>
+        <p class="line">Kitchener–Waterloo, ON</p>
+        <p class="line"><a href="https://linkedin.com/in/yourhandle">LinkedIn</a></p>
+      </div>
+      <div>
+        <h4>education</h4>
+        <p class="line">M.A. Human–Computer Interaction<br>Carleton University</p>
+        <p class="line" style="margin-top:12px;">Hon. B.A. Psychology<br>University of Waterloo</p>
+      </div>
+    </div>
+    <p class="foot-note">Built as a static site, hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+</body>
+</html>
