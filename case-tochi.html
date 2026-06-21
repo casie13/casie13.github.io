@@ -41,6 +41,22 @@
   .imgslot .box{aspect-ratio:16/9;background:var(--paper-2);border:1px dashed var(--line);border-radius:2px;display:flex;align-items:center;justify-content:center}
   .imgslot .box span{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted)}
 
+  /* poster figure — sits wider than the reading column so detail stays legible */
+  .figwide{max-width:1000px;margin:36px auto 0;padding:0 28px}
+  .figwide figure{margin:0}
+  .figwide a.frame{
+    display:block;border:1px solid var(--line);border-radius:2px;overflow:hidden;
+    background:#fff;line-height:0;transition:box-shadow .2s ease,transform .2s ease;
+  }
+  .figwide a.frame:hover{box-shadow:0 6px 24px rgba(24,25,26,.14)}
+  .figwide img{width:100%;height:auto;display:block}
+  .figwide figcaption{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--muted);
+    margin-top:12px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;line-height:1.5;
+  }
+  .figwide figcaption a{color:var(--accent);text-decoration:none;white-space:nowrap}
+  .figwide figcaption a:hover{text-decoration:underline}
+
   /* the spine */
   article{padding:30px 0 20px}
   .step{padding:40px 0;border-top:1px solid var(--line)}
@@ -81,18 +97,26 @@
   <div class="case-head-inner">
     <p class="tag">privacy &amp; security</p>
     <h1>How remote-proctoring surveillance reshapes trust</h1>
-    <p class="standfirst">A qualitative study on e-proctoring — what happens to student behaviour, dignity, and trust when an algorithm and a webcam are watching the exam.</p>
+    <p class="standfirst">A mixed-methods study of e-proctoring — what happens to student behaviour, dignity, and trust when an algorithm and a webcam are watching the exam.</p>
     <div class="metarow">
       <div class="m"><span>role</span><b>Lead researcher</b></div>
-      <div class="m"><span>methods</span><b>Qual</b></div>
+      <div class="m"><span>methods</span><b>Qual + quant — fill in</b></div>
       <div class="m"><span>context</span><b>CHORUS Lab, Carleton</b></div>
       <div class="m"><span>outputs</span><b>SOUPS '22 · EuroUSEC '23 · TOCHI</b></div>
     </div>
   </div>
 </header>
 
-<div class="imgslot">
-  <div class="box"><span>images/tochi-hero.jpg — drop a key visual here (optional)</span></div>
+<div class="figwide">
+  <figure>
+    <a class="frame" href="images/tochi-soups-poster.pdf" target="_blank" rel="noopener" aria-label="Open the full SOUPS 2022 poster as a PDF">
+      <img src="images/tochi-poster.png" alt="SOUPS 2022 research poster: &lsquo;I didn&rsquo;t even want to turn my head because I was so scared of the prof&rsquo; — Student Perceptions of e-Proctoring Software, by Kazma Chaudhry, Ashi Mann, Hala Assal, and Sonia Chiasson.">
+    </a>
+    <figcaption>
+      <span>SOUPS 2022 — Distinguished Poster Award. Chaudhry, Mann, Assal &amp; Chiasson.</span>
+      <a href="images/tochi-soups-poster.pdf" target="_blank" rel="noopener">View full poster (PDF) →</a>
+    </figcaption>
+  </figure>
 </div>
 
 <div class="wrap">
